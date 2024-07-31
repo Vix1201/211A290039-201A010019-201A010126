@@ -1,0 +1,1933 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Giay the thao</title>
+	<link rel="stylesheet" href="..\bai cuoi ki\nike.css">
+
+
+
+	<script src="khuyenmai.js"></script>
+	 <style>
+        .slider-product-one-content-item1{
+            display: none;
+        }
+
+        .slider-product-one-content-item1.active {
+            display: block;
+        }
+        .slider-product-one-content-items-content1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .slider-product-one-content-item1 {
+        width: calc(25% - 10px); /* Set the width of each item, considering the margin */
+        margin: 0 5px 20px 5px; /* Set margin for all sides */
+        box-sizing: border-box;
+        height: 540px;
+    }
+
+	
+    </style>
+</head>
+<body onload="hienThiSanPham()" >
+
+<!-- MUAHANg-->
+
+<!-- mua hang -->
+<div id="muahang" class="modal" style="display: none;">
+    <div class="modal-content" style="text-align: center; width: 60%; height: 450px;">
+      <span class="close" onclick="hidemuahang()">&times;</span>
+      <!-- Form đăng nhập có thể được thêm vào ở đây -->
+		<form>
+		    <div style="float: left; width: 48%;">
+		        <img id="hinhmuahang" src="../bai cuoi ki/hinhanhweb/saobang7.gif" style="width: 100%;" >
+		    </div>
+		    
+		    <div id="newDiv" style="float: right; width: 48%; text-align: left;">
+		    	<li ><b id="tenmuahang" style="font-size:30px">?</b></li>
+            	<li id="brandmuahang" style="font-size:25px">?</li>
+            	<li id="gioitinhmuahang" style="font-size:25px">?</li>
+            	<li id="sizemuahang" style="font-size:25px">?</li>
+            	<li id="colormuahang" style="font-size:25px">?</li>
+            	<li>
+            		<span style="font-size:25px; color: red;">
+            			<span id="monneymuahang">?</span><sup>đ</sup>
+            		</span>
+            	</li>
+            	<br>
+            	<li><label for="quantity">Số lượng: </label>
+            
+             <select id="quantity" name="quantity" onchange="thaydoigia() " style="width:50px; height: auto;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+			    <option value="5">5</option>
+			    <option value="6">6</option>
+			    <option value="7">7</option>
+			    <option value="8">8</option>
+			    <option value="9">9</option>
+			    <option value="10">10</option>
+			    <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+			    <option value="15">15</option>
+			    <option value="16">16</option>
+			    <option value="17">17</option>
+			    <option value="18">18</option>
+			    <option value="19">19</option>
+			    <option value="20">20</option>
+			    <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+			    <option value="25">25</option>
+			    <option value="26">26</option>
+			    <option value="27">27</option>
+			    <option value="28">28</option>
+			    <option value="29">29</option>
+			    <option value="30">30</option>
+			    <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+			    <option value="35">35</option>
+			    <option value="36">36</option>
+			    <option value="37">37</option>
+			    <option value="38">38</option>
+			    <option value="39">39</option>
+			    <option value="40">40</option>
+			    <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+			    <option value="45">45</option>
+			    <option value="46">46</option>
+			    <option value="47">47</option>
+			    <option value="48">48</option>
+			    <option value="49">49</option>
+			    <option value="50">50</option>
+            </select>
+
+           	<button style="font-size:30px; float: right;" onclick="nhanmuahang('trangnike.html')"; href="trangnike.html">Mua hàng</button>
+
+		    </div>
+		   	
+		</form>
+    </div>
+  </div>
+<div style="z-index:2; position: relative;">
+	<div class="header-top" style="position: fixed;">
+		<div class="col-15">
+		</div>
+		<div class="header-top-item menu">
+			<div id="nav">
+				<nav class="main-nav text-center">
+					<ul class="clearfix">
+						<li class=" " >
+							<a href="trang.html"> 
+								TRANG CHỦ
+							</a>
+						</li>
+						<li class=" " >
+							<a href=""> 
+								THỜI TRANG NAM
+							</a>
+							<div class="megamenu" style="margin-left:-16px">	
+								<div class="container">
+									<div class="col-2 menu" style="height: 543px;">
+										<ul>
+											<li class="mega-item">	
+													<b>
+														Giày
+													</b>
+												<ul class="">
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamNike()">
+															Giày Nike	
+														</a>
+													</li>
+
+													<li class="">
+														<a  href="trangnike.html" onclick="GiaynamAdidas()"> 
+															Giày Adidas	
+														</a>
+													</li>
+										
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamAM()"> 
+															Giày AM	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamBongda()"> 
+															Giày Bóng đá	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamTennis()"> 
+															Giày Tennis	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamGolf()"> 
+															Giày Golf	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamBongro()"> 
+															Giày Bóng rổ	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamThoitrang()"> 
+															Giày Thời trang	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamRunning()"> 
+															Giày Running	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynamTraining()"> 
+															Giày Training	
+														</a>
+													</li>
+												</ul>
+											</li>
+
+											<li class="mega-item">
+													<b>
+														Quần áo
+													</b>
+												<ul class="">
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamNike()">
+															Quần áo Nike	
+														</a>
+													</li>
+
+													<li class="">
+														<a  href="trangquanao.html" onclick="GiaynamAdidas()"> 
+															Quần áo Adidas	
+														</a>
+													</li>
+										
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamAM()"> 
+															Quần áo AM	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamBongda()"> 
+															Quần áo Bóng đá	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamTennis()"> 
+															Quần áo Tennis	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamGolf()"> 
+															Quần áo Golf	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamBongro()"> 
+															Quần áo Bóng rổ	
+														</a>
+													</li>
+													
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamRunning()"> 
+															Quần áo Running	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynamTraining()"> 
+															Quần áo Training	
+														</a>
+													</li>
+												</ul>
+											</li>
+
+										</ul>
+									</div>						
+								</div>
+							</div>
+						</li>
+						<li class=" ">
+							<a href=""> 
+								THỜI TRANG NỮ
+							</a>
+						<div class="megamenu" style="margin-left:-16px">	
+							<div class="container">
+								<div class="col-2 menu" style="height: 543px;">
+									<ul>
+										<li class="mega-item">	
+													<b>
+														Giày
+													</b>
+												<ul class="">
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuNike()">
+															Giày Nike	
+														</a>
+													</li>
+
+													<li class="">
+														<a  href="trangnike.html" onclick="GiaynuAdidas()"> 
+															Giày Adidas	
+														</a>
+													</li>
+										
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuAM()"> 
+															Giày AM	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuBongda()"> 
+															Giày Bóng đá	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuTennis()"> 
+															Giày Tennis	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuGolf()"> 
+															Giày Golf	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuBongro()"> 
+															Giày Bóng rổ	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuThoitrang()"> 
+															Giày Thời trang	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuRunning()"> 
+															Giày Running	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangnike.html" onclick="GiaynuTraining()"> 
+															Giày Training	
+														</a>
+													</li>
+												</ul>
+											</li>
+											
+										
+								
+								<li class="mega-item">
+										<b>Quần áo</b>
+									<ul class="">
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuNike()">
+															Quần áo Nike	
+														</a>
+													</li>
+
+													<li class="">
+														<a  href="trangquanao.html" onclick="GiaynuAdidas()"> 
+															Quần áo Adidas	
+														</a>
+													</li>
+										
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuAM()"> 
+															Quần áo AM	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuBongda()"> 
+															Quần áo Bóng đá	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuTennis()"> 
+															Quần áo Tennis	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuGolf()"> 
+															Quần áo Golf	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuBongro()"> 
+															Quần áo Bóng rổ	
+														</a>
+													</li>
+													
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuRunning()"> 
+															Quần áo Running	
+														</a>
+													</li>
+													
+													<li class="">
+														<a href="trangquanao.html" onclick="GiaynuTraining()"> 
+															Quần áo Training	
+														</a>
+													</li>
+												</ul>
+								</li>
+									
+								
+							</ul>
+						</div>						
+					</div>
+				</div>
+			</li>
+
+			<li class=" ">
+				<a href=""> 
+					THIẾT BỊ TẬP
+				</a>
+				<div class="megamenu" style="margin-left:-16px">	
+					<div class="container">
+						<div class="col-2 menu" style="height: 543px;">
+							<ul>
+								<li class="mega-item">
+										<b>Thiết bị phòng GYM</b>
+									<ul class="">
+										
+										<li class="">
+											<a href="trangvandong.html" onclick="maychayboCheck()"> 
+												Máy chạy bộ	
+											</a>
+										</li>
+										
+										<li class="">
+											<a href="trangvandong.html" onclick="xedaptapCheck()"> 
+												Xe đạp tập	
+											</a>
+										</li>
+										
+										<li class="">
+											<a href="trangvandong.html" onclick="taCheck()"> 
+												Giàn tạ đa năng	
+											</a>
+										</li>
+										
+									</ul>
+								</li>
+
+							</ul>
+						</div>					
+					</div>
+				</div>
+			</li>
+			<li class=" ">
+				<a href=""> 
+					PHỤ KIỆN
+				</a>
+				<div class="megamenu" style="margin-left:-16px">	
+					<div class="container">	
+						<div class="col-2 menu" style="height: 543px;">
+							<ul>
+								<li class="mega-item">			
+										<b>Giày</b>
+									<ul class="">
+										
+										<li class="">
+											<a href="trangphukien.html" onclick="tatvoCheck()"> 
+												Tất - Vớ	
+											</a>
+										</li>
+										
+									
+									</ul>
+								</li>
+								<li class="mega-item">
+							
+										<b>Cá nhân</b>
+						
+									<ul class="">
+										
+										<li class="">
+											<a href="trangphukien.html" onclick="tuixachCheck()"> 
+												Túi xách
+											</a>
+										</li>
+										<li class="">
+											<a href="trangphukien.html" onclick="baoloCheck()"> 
+												Bao lô	
+											</a>
+										</li>
+										<li class="">
+											<a href="trangphukien.html" onclick="valiCheck()"> 
+												Va li	
+											</a>
+										</li>
+										<li class="">
+											<a href="trangphukien.html" onclick="munonCheck()"> 
+												Mũ - Nón	
+											</a>
+										</li>
+										
+									</ul>
+								</li>
+									
+							</ul>
+						</div>						
+					</div>
+				</div>
+			</li>
+		
+			
+		
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+    </div>
+
+ <div class="header-top-item hotline visible-lg">
+  <table>
+    <tr>
+      <td>
+        <a href="dangky.html" id="btnDK" style="color:blue">
+          <img src="..\bai cuoi ki\icon\icondangky.jpg">
+          <b>ĐĂNG KÍ</b>
+        </a>
+      </td>
+
+      <td style="width: 20px;"></td>
+
+      <td>
+        <a href="#" id="btnDK" onclick="showLoginModal()" style="color:blue">
+          <img src="..\bai cuoi ki\icon\icondangnhap.png">
+          <b>ĐĂNG NHẬP</b>
+        </a>
+      </td>
+
+      <td style="width: 20px;"></td>
+
+      <td>
+        <a href="" id="btnDK" data-toggle="modal" style="color:blue">
+          <img src="..\bai cuoi ki\icon\icongiohang.png">
+          <b>GIO HANH</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal" style="display: none;">
+    <div class="modal-content" style="text-align: center;">
+      <span class="close" onclick="hideLoginModal()">&times;</span>
+      <!-- Form đăng nhập có thể được thêm vào ở đây -->
+      <form id="loginForm">
+    <div>
+        <input type="text" class="inputtext" name="username" id="username" placeholder="Username">
+    </div>
+    <br>
+    <div>
+        <input type="password" class="inputtext" name="password" id="password" placeholder="Password">
+    </div>
+    <br>
+    <div>
+        <button class="hieuungtao" name="login" type="button" onclick="validateLogin()" style="font-size:20px; color:white; background-color:blue; padding-top: 5px; padding-bottom: 5px; padding-left: 40px;padding-right: 40px; margin-bottom:10px; border-radius: 5px;">
+            Đăng nhập
+        </button>
+
+        <hr style=" margin-bottom: 5px; border: solid 1px black;">
+
+        <button class="hieuungtao" name="login" type="submit" style="font-size:20px; color:white; background-color:green; padding-top: 5px; padding-bottom: 5px; padding-left: 40px;padding-right: 40px; margin-bottom:10px; border-radius: 5px;">
+            <a href="dangky.html">Tạo tài khoản mới</a>
+        </button>
+    </div>
+</form>
+
+
+<script>
+    
+</script>
+    </div>
+  </div>
+</div>
+	
+  		</div>
+	</div>
+</div>
+
+
+<div style="width: 100%; padding-top: 100px; padding-bottom: 20px;">
+	<div style="width: 100%; background-color: #f5f5f5;font-size: 15px;"><a href="trang.html" style="margin-left: 90px;">Trang chủ </a>/<a href="trangnike.html"> Giày</a></div>
+</div>
+
+<div style="float: left; width: 19%; height:100px; position: fixed;">
+	<b style="font-size: 30px; margin-left:10px">Tìm kiếm</b>
+	<hr>
+	<b style="font-size: 18px;">Thương hiệu và loại</b>
+	<table>
+			<tr>
+				<td>
+					<input type="checkbox" name="brand" id="adidasCheckbox" value="Adidas" onchange="hienThiSanPham()" >
+					<span>Adidas</span>
+				</td>
+				<td style="width: 50PX;"></td>
+				<td>
+					<input type="checkbox" name="brand" id="nikeCheckbox" value="Nike" onchange="hienThiSanPham()">
+						<span>Nike</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<label>
+						<input type="checkbox" name="brand" id="amCheckbox" value="AM" onchange="hienThiSanPham()">
+						<span>AM</span>
+					</label>
+				</td>
+				<td style="width: 50PX;"></td>
+				<td>
+					<input type="checkbox" name="brand" id="bongdaCheckbox" value="Bóng đá" onchange="hienThiSanPham()">
+						<span>Bóng đá</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="checkbox" name="brand" id="tennisCheckbox" value="Tennis" onchange="hienThiSanPham()" >
+					<span>Tennis</span>
+				</td>
+				<td style="width: 50PX;"></td>
+				<td>
+					<input type="checkbox" name="brand" id="golfCheckbox" value="Golf" onchange="hienThiSanPham()">
+						<span>Golf</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="checkbox" name="brand" id="bongroCheckbox" value="Bóng rổ" onchange="hienThiSanPham()" >
+					<span>Bóng rổ</span>
+				</td>
+				<td style="width: 50PX;"></td>
+				<td>
+					<input type="checkbox" name="brand" id="thoitrangCheckbox" value="Thời trang" onchange="hienThiSanPham()">
+						<span>Thời trang</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="checkbox" name="brand" id="runningCheckbox" value="Running" onchange="hienThiSanPham()" >
+					<span>Running</span>
+				</td>
+				<td style="width: 50PX;"></td>
+				<td>
+					<input type="checkbox" name="brand" id="trainingCheckbox" value="Training" onchange="hienThiSanPham()">
+						<span>Training</span>
+				</td>
+			</tr>
+
+
+		</table>
+
+	<hr>
+	<b style="font-size: 18px;">Giá</b>					
+	<table>
+		<tr>
+			<td>
+			     <select id="combomonney" name="fruits" onchange="hienThiSanPham()">
+			     	<option value="0"></option>
+				    <option value="1">Dưới 1.000.000</option>
+				    <option value="2">1.000.000 - 2.000.000</option>
+				    <option value="3">2.000.001 - 4.999.999</option>
+				    <option value="4">Hơn 5.000.000</option>
+				  </select>
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<table>
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" id="namCheckbox" name="gioitinh" value="Giày nam" onchange="hienThiSanPham()">
+					<span>Nam</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" id="nuCheckbox" name="gioitinh" value="Giày nữ" onchange="hienThiSanPham()">
+					<span>Nữ</span>
+				</label>
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<b style="font-size: 18px;">SIZE</b>	
+	<table>
+		
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 26" onchange="hienThiSanPham()">
+					<span>26</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 27" onchange="hienThiSanPham()">
+					<span>27</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 28" onchange="hienThiSanPham()">
+					<span>28</span>
+				</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 29" onchange="hienThiSanPham()">
+					<span>29</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 30" onchange="hienThiSanPham()">
+					<span>30</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 31" onchange="hienThiSanPham()">
+					<span>31</span>
+				</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 32" onchange="hienThiSanPham()">
+					<span>32</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 33" onchange="hienThiSanPham()">
+					<span>33</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 34" onchange="hienThiSanPham()">
+					<span>34</span>
+				</label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 35" onchange="hienThiSanPham()">
+					<span>35</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 36" onchange="hienThiSanPham()">
+					<span>36</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 37" onchange="hienThiSanPham()">
+					<span>37</span>
+				</label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 38" onchange="hienThiSanPham()">
+					<span>38</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 39" onchange="hienThiSanPham()">
+					<span>39</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 40" onchange="hienThiSanPham()">
+					<span>40</span>
+				</label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 41" onchange="hienThiSanPham()">
+					<span>41</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 42" onchange="hienThiSanPham()">
+					<span>42</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="size" value="Size 43" onchange="hienThiSanPham()">
+					<span>43</span>
+				</label>
+			</td>
+		</tr>
+
+	</table>	
+	<hr>
+	<b style="font-size: 18px;">Màu sắc</b>	
+	<table>
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu đỏ" onchange="hienThiSanPham()" style="background-color: red;">
+					<span>Đỏ</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu xanh da trời" onchange="hienThiSanPham()">
+					<span>Xanh da trời</span>
+				</label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu dương" onchange="hienThiSanPham()">
+					<span>Xanh dương</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu vàng" onchange="hienThiSanPham()">
+					<span>Vàng</span>
+				</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu trắng" onchange="hienThiSanPham()">
+					<span>Trắng</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu đen" onchange="hienThiSanPham()">
+					<span>Đen</span>
+				</label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu cam" onchange="hienThiSanPham()">
+					<span>Cam</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu hồng" onchange="hienThiSanPham()">
+					<span>Hồng</span>
+				</label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu tím" onchange="hienThiSanPham()">
+					<span>Tím</span>
+				</label>
+			</td>
+			<td style="width: 50PX;"></td>
+			<td>
+				<label>
+					<input type="checkbox" name="color" value="Màu xám" onchange="hienThiSanPham()">
+					<span>Xám</span>
+				</label>
+			</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">	
+	function limitCheckboxSelection(groupName) {
+	    const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
+	    checkboxes.forEach(checkbox => {
+	      checkbox.addEventListener('change', () => {
+	        checkboxes.forEach(otherCheckbox => {
+	          if (otherCheckbox !== checkbox) {
+	            otherCheckbox.checked = false;
+	            hienThiSanPham();
+	          }
+	        });
+	      });
+	    });
+  	}
+  limitCheckboxSelection('brand');
+  limitCheckboxSelection('size');
+  limitCheckboxSelection('color');
+  limitCheckboxSelection('gioitinh');
+</script>	
+
+
+<script type="text/javascript">
+	// Get the checkbox elements
+      	var adidasCheckbox = document.getElementById("adidasCheckbox");
+		var nikeCheckbox = document.getElementById("nikeCheckbox");
+		var amCheckbox = document.getElementById("amCheckbox");
+		var bongdaCheckbox = document.getElementById("bongdaCheckbox");
+
+		var tennisCheckbox = document.getElementById("tennisCheckbox");
+		var golfCheckbox = document.getElementById("golfCheckbox");
+		var bongroCheckbox = document.getElementById("bongroCheckbox");
+		var thoitrangCheckbox = document.getElementById("thoitrangCheckbox");
+
+		var runningCheckbox = document.getElementById("runningCheckbox");
+		var trainingCheckbox = document.getElementById("trainingCheckbox");
+
+		var namCheckbox = document.getElementById("namCheckbox");
+		var nuCheckbox = document.getElementById("nuCheckbox");
+		// Retrieve the flags from localStorage
+		var adidasCheckboxStatus = localStorage.getItem("adidasCheckboxStatus");
+		var nikeCheckboxStatus = localStorage.getItem("nikeCheckboxStatus");
+		var amCheckboxStatus = localStorage.getItem("amCheckboxStatus");
+		var bongdaCheckboxStatus = localStorage.getItem("bongdaCheckboxStatus");
+
+		var tennisCheckboxStatus = localStorage.getItem("tennisCheckboxStatus");
+		var golfCheckboxStatus = localStorage.getItem("golfCheckboxStatus");
+		var bongroCheckboxStatus = localStorage.getItem("bongroCheckboxStatus");
+		var thoitrangCheckboxStatus = localStorage.getItem("thoitrangCheckboxStatus");
+
+		var runningCheckboxStatus = localStorage.getItem("runningCheckboxStatus");
+		var trainingCheckboxStatus = localStorage.getItem("trainingCheckboxStatus");
+
+		var namCheckboxStatus = localStorage.getItem("namCheckboxStatus");
+		var nuCheckboxStatus = localStorage.getItem("nuCheckboxStatus");
+
+// Check or uncheck the checkboxes based on the flags
+	adidasCheckbox.checked = (adidasCheckboxStatus === "true");
+	nikeCheckbox.checked = (nikeCheckboxStatus === "true");
+	amCheckbox.checked = (amCheckboxStatus === "true");
+	bongdaCheckbox.checked = (bongdaCheckboxStatus === "true");
+
+	tennisCheckbox.checked = (tennisCheckboxStatus === "true");
+	golfCheckbox.checked = (golfCheckboxStatus === "true");
+	bongroCheckbox.checked = (bongroCheckboxStatus === "true");
+	thoitrangCheckbox.checked = (thoitrangCheckboxStatus === "true");
+
+	runningCheckbox.checked = (runningCheckboxStatus === "true");
+	trainingCheckbox.checked = (trainingCheckboxStatus === "true");
+	  
+	namCheckbox.checked = (namCheckboxStatus === "true"); 
+	nuCheckbox.checked = (nuCheckboxStatus === "true");       
+</script>
+
+
+</div>
+
+<div style="float: right; width: 79%;">
+<div style="width: 100%; height: 880px; ">
+    <div class="slider-product-one1">
+        <div class="container1">
+            <div class="slider-product-one-content1">
+                <div class="slider-content-left-top-container1">
+                    <div class="slider-product-one-content-items-content1">
+
+                    	<!--Giay Nike-->
+                        <div class="slider-product-one-content-item1">
+                            <img class="hinh1"src="../bai cuoi ki/hinhanhweb/giay/nikenam1.png" style="width: 100%;" alt="">
+                            <a onclick="showmuahang('Nike Air Force 107', 'Nike', 'Giày nam', 'Size 40', 'Màu trắng', '2.929.000', '../bai cuoi ki/hinhanhweb/giay/nikenam1.png')"> Mua hàng</a>
+                            <div class="slider-product-one-content-item-text">
+                             <li id="ten"><b style="font-size:20px">Nike Air Force 107</b></li>
+                            	<li id="brand" style="font-size:15px">Nike</li>
+                            	<li id="gioitinh" style="font-size:15px">Giày nam</li>
+                            	<li id="size" style="font-size:15px">Size 40</li>
+                            	<li id="color" style="font-size:15px">Màu trắng</li>
+                            	<li>
+                            		<span style="font-size:15px; color: red;">
+                            			<span id="monney">2.929.000</span><sup>đ</sup>
+                            		</span>&nbsp;&nbsp;&nbsp;
+                            		<span style="font-size:15px; color: #333; text-decoration: line-through;">
+                            			3.000.000<sup>đ</sup>
+                            		</span>
+                            	</li>
+                            </div>
+                        </div>
+
+                         <div class="slider-product-one-content-item1">
+                            <img class="hinh1"src="../bai cuoi ki/hinhanhweb/giay/nikenam2.png" style="width: 100%;" alt="">
+                            <a onclick="showmuahang('Nike SB Chron 2', 'Nike', 'Giày nam', 'Size 41', 'Màu đen', '2.069.000', '../bai cuoi ki/hinhanhweb/giay/nikenam2.png')"> Mua hàng</a>
+                            <div class="slider-product-one-content-item-text">
+                             <li id="ten"><b style="font-size:20px">Nike SB Chron 2</b></li>
+                            	<li id="brand" style="font-size:15px">Nike</li>
+                            	<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+                            	<li id="size" style="font-size:15px">Size 41</li>
+                            	<li id="color" style="font-size:15px">Màu đen</li>
+                            	<li>
+                            		<span style="font-size:15px; color: red;">
+                            			<span id="monney">2.069.000</span><sup>đ</sup>
+                            		</span>
+                            	</li>
+                            </div>
+                        </div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikenam2.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Nike SB Chron 2', 'Nike', 'Giày nam', 'Size 38', 'Màu đen', '2.069.000', '../bai cuoi ki/hinhanhweb/giay/nikenam2.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Nike SB Chron 2</b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 38</li>
+								<li id="color" style="font-size:15px">Màu đen</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.069.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikenam2.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Nike SB Chron 2', 'Nike', 'Giày nam', 'Size 35', 'Màu đen', '2.069.000', '../bai cuoi ki/hinhanhweb/giay/nikenam2.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Nike SB Chron 2</b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 35</li>
+								<li id="color" style="font-size:15px">Màu đen</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.069.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Chạy Bộ Nike Renew Run 4', 'Nike', 'Giày nam', 'Size 42', 'Màu dương', '2.111.200', '../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Chạy Bộ Nike Renew Run 4 </b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 42</li>
+								<li id="color" style="font-size:15px">Màu dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.111.200</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.639.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Chạy Bộ Nike Renew Run 4', 'Nike', 'Giày nam', 'Size 40', 'Màu xanh dương', '2.111.200', '../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Chạy Bộ Nike Renew Run 4 </b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 40</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.111.200</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.639.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Chạy Bộ Nike Renew Run 4', 'Nike', 'Giày nam', 'Size 37', 'Màu xanh dương', '2.111.200', '../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Chạy Bộ Nike Renew Run 4 </b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 37</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.111.200</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.639.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Chạy Bộ Nike Renew Run 4', 'Nike', 'Giày nam', 'Size 36', 'Màu xanh dương', '2.111.200', '../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Chạy Bộ Nike Renew Run 4 </b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 36</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.111.200</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.639.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Chạy Bộ Nike Renew Run 4', 'Nike', 'Giày nam', 'Size 32', 'Màu xanh dương', '2.111.200', '../bai cuoi ki/hinhanhweb/giay/nikexanhduong.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Chạy Bộ Nike Renew Run 4 </b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 32</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.111.200</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.639.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikenam1.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Nike Air Force 107', 'Nike', 'Giày nam', 'Size 41', 'Màu trắng', '2.929.000', '../bai cuoi ki/hinhanhweb/giay/nikenam1.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Nike Air Force 107</b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 41</li>
+								<li id="color" style="font-size:15px">Màu trắng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.929.000</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										3.000.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikenam1.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Nike Air Force 107', 'Nike', 'Giày nam', 'Size 35', 'Màu trắng', '2.929.000', '../bai cuoi ki/hinhanhweb/giay/nikenam1.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Nike Air Force 107</b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 35</li>
+								<li id="color" style="font-size:15px">Màu trắng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.929.000</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										3.000.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/nikenam1.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Nike Air Force 107', 'Nike', 'Giày nam', 'Size 33', 'Màu trắng', '2.929.000', '../bai cuoi ki/hinhanhweb/giay/nikenam1.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Nike Air Force 107</b></li>
+								<li id="brand" style="font-size:15px">Nike</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 33</li>
+								<li id="color" style="font-size:15px">Màu trắng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.929.000</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										3.000.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+                        
+						<!--Giay adidat-->
+                        <div class="slider-product-one-content-item1">
+                            <img class="hinh1"src="../bai cuoi ki/hinhanhweb/giay/adidasnu.png" style="width: 100%;" alt="">
+                            <a onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nữ', 'Size 33', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnu.png')"> Mua hàng</a>
+                            <div class="slider-product-one-content-item-text">
+                             <li id="ten"><b style="font-size:20px">Response Super 3.0</b></li>
+                            	<li id="brand" style="font-size:15px">Adidas</li>
+                            	<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+                            	<li id="size" style="font-size:15px">Size 33</li>
+                            	<li id="color" style="font-size:15px">Màu trắng</li>
+                            	<li>
+                            		<span style="font-size:15px; color: red;">
+                            			<span id="monney">1.069.000</span><sup>đ</sup>
+                            		</span>
+                            	</li>
+                            </div>
+                        </div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nữ', 'Size 35', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Response Super 3.0</b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 35</li>
+								<li id="color" style="font-size:15px">Màu trắng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.069.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nữ', 'Size 38', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Response Super 3.0</b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 38</li>
+								<li id="color" style="font-size:15px">Màu trắng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.069.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+                     	
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nữ', 'Size 40', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Response Super 3.0</b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 40</li>
+								<li id="color" style="font-size:15px">Màu trắng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.069.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nữ', 'Size 42', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Response Super 3.0</b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 42</li>
+								<li id="color" style="font-size:15px">Màu trắng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.069.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+                     	 <div class="slider-product-one-content-item1">
+                            <img class="hinh1"src="../bai cuoi ki/hinhanhweb/giay/adidasnam.png" style="width: 100%;" alt="">
+                            <a onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nam', 'Size 33', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnam.png')"> Mua hàng</a>
+                            <div class="slider-product-one-content-item-text">
+                             <li id="ten"><b style="font-size:20px">GRAND COURT </b></li>
+                            	<li id="brand" style="font-size:15px">Adidas</li>
+                            	<li id="gioitinh" style="font-size:15px">Giày nam</li>
+                            	<li id="size" style="font-size:15px">Size 35</li>
+                            	<li id="color" style="font-size:15px">Màu đen</li>
+                            	<li>
+                            		<span style="font-size:15px; color: red;">
+                            			<span id="monney">1.569.000</span><sup>đ</sup>
+                            		</span>
+                            	</li>
+                            </div>
+                        </div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nam', 'Size 35', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">GRAND COURT </b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 35</li>
+								<li id="color" style="font-size:15px">Màu đen</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.569.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nam', 'Size 38', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">GRAND COURT </b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 38</li>
+								<li id="color" style="font-size:15px">Màu đen</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.569.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nam', 'Size 40', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">GRAND COURT </b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 40</li>
+								<li id="color" style="font-size:15px">Màu đen</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.569.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/adidasnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Response Super 3.0', 'Adidas', 'Giày nam', 'Size 42', 'Màu trắng', '1.069.000', '../bai cuoi ki/hinhanhweb/giay/adidasnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">GRAND COURT </b></li>
+								<li id="brand" style="font-size:15px">Adidas</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 42</li>
+								<li id="color" style="font-size:15px">Màu đen</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.569.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<!--AM-->
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nữ 5252 AM Peach/Pink', 'AM', 'Giày nữ', 'Size 33', 'Màu hồng', '1.200.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nữ 5252 AM Peach/Pink</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 33</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.200.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nữ 5252 AM Peach/Pink', 'AM', 'Giày nữ', 'Size 35', 'Màu hồng', '1.200.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nữ 5252 AM Peach/Pink</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 35</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.200.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nữ 5252 AM Peach/Pink', 'AM', 'Giày nữ', 'Size 38', 'Màu hồng', '1.200.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nữ 5252 AM Peach/Pink</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 38</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.200.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nữ 5252 AM Peach/Pink', 'AM', 'Giày nữ', 'Size 40', 'Màu hồng', '1.200.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nữ 5252 AM Peach/Pink</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 40</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.200.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nam 5158 AM Grey/Brown', 'AM', 'Giày nam', 'Size 40', 'Màu xám', '1.300.000', '../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nam 5158 AM Grey/Brown</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 40</li>
+								<li id="color" style="font-size:15px">Màu xám</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nam 5158 AM Grey/Brown', 'AM', 'Giày nam', 'Size 42', 'Màu xám', '1.300.000', '../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nam 5158 AM Grey/Brown</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 42</li>
+								<li id="color" style="font-size:15px">Màu xám</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nam 5158 AM Grey/Brown', 'AM', 'Giày nam', 'Size 37', 'Màu xám', '1.300.000', '../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nam 5158 AM Grey/Brown</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 37</li>
+								<li id="color" style="font-size:15px">Màu xám</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nam 5158 AM Grey/Brown', 'AM', 'Giày nam', 'Size 34', 'Màu xám', '1.300.000', '../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nam 5158 AM Grey/Brown</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 34</li>
+								<li id="color" style="font-size:15px">Màu xám</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày running nam 5158 AM Grey/Brown', 'AM', 'Giày nam', 'Size 31', 'Màu xám', '1.300.000', '../bai cuoi ki/hinhanhweb/giay/giayamnamxam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày running nam 5158 AM Grey/Brown</b></li>
+								<li id="brand" style="font-size:15px">AM</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 31</li>
+								<li id="color" style="font-size:15px">Màu xám</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<!--Bóng đá-->
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Bóng Đá Nam Nike Phantogx Academy', 'Bóng đá', 'Giày nam', 'Size 31', 'Màu xanh lá cây', '1.565.400', '../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Bóng Đá Nam Nike Phantogx Academy</b></li>
+								<li id="brand" style="font-size:15px">Bóng đá</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 31</li>
+								<li id="color" style="font-size:15px">Màu xanh lá cây</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.565.400</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.609.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Bóng Đá Nam Nike Phantogx Academy', 'Bóng đá', 'Giày nam', 'Size 34', 'Màu xanh lá cây', '1.565.400', '../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Bóng Đá Nam Nike Phantogx Academy</b></li>
+								<li id="brand" style="font-size:15px">Bóng đá</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 34</li>
+								<li id="color" style="font-size:15px">Màu xanh lá cây</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.565.400</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.609.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Bóng Đá Nam Nike Phantogx Academy', 'Bóng đá', 'Giày nam', 'Size 38', 'Màu xanh lá cây', '1.565.400', '../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Bóng Đá Nam Nike Phantogx Academy</b></li>
+								<li id="brand" style="font-size:15px">Bóng đá</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 38</li>
+								<li id="color" style="font-size:15px">Màu xanh lá cây</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.565.400</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.609.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Bóng Đá Nam Nike Phantogx Academy', 'Bóng đá', 'Giày nam', 'Size 40', 'Màu xanh lá cây', '1.565.400', '../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Bóng Đá Nam Nike Phantogx Academy</b></li>
+								<li id="brand" style="font-size:15px">Bóng đá</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 40</li>
+								<li id="color" style="font-size:15px">Màu xanh lá cây</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.565.400</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.609.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Bóng Đá Nam Nike Phantogx Academy', 'Bóng đá', 'Giày nam', 'Size 37', 'Màu xanh lá cây', '1.565.400', '../bai cuoi ki/hinhanhweb/giay/Giaydabong Phantogx.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Bóng Đá Nam Nike Phantogx Academy</b></li>
+								<li id="brand" style="font-size:15px">Bóng đá</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 37</li>
+								<li id="color" style="font-size:15px">Màu xanh lá cây</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.565.400</span><sup>đ</sup>
+									</span>&nbsp;&nbsp;&nbsp;
+									<span style="font-size:15px; color: #333; text-decoration: line-through;">
+										2.609.000<sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<!--Giày tennis-->
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960', 'Tennis', 'Giày nam', 'Size 34', 'Màu xanh dương', '2.300.000', '../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 34</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960', 'Tennis', 'Giày nam', 'Size 26', 'Màu xanh dương', '2.300.000', '../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 26</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960', 'Tennis', 'Giày nam', 'Size 27', 'Màu xanh dương', '2.300.000', '../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 27</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960', 'Tennis', 'Giày nam', 'Size 29', 'Màu xanh dương', '2.300.000', '../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 29</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960', 'Tennis', 'Giày nam', 'Size 235', 'Màu xanh dương', '2.300.000', '../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 35</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960', 'Tennis', 'Giày nam', 'Size 38', 'Màu xanh dương', '2.300.000', '../bai cuoi ki/hinhanhweb/giay/Giaytennisnam.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Nam Asics Court FF 3 Novak 1041A361-960</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nam</li>
+								<li id="size" style="font-size:15px">Size 38</li>
+								<li id="color" style="font-size:15px">Màu xanh dương</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">2.300.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Asics Court Slide 2', 'Tennis', 'Giày nữ', 'Size 38', 'Màu hồng', '1.890.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Asics Court Slide 2</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 38</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.890.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Asics Court Slide 2', 'Tennis', 'Giày nữ', 'Size 40', 'Màu hồng', '1.890.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Asics Court Slide 2</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 40</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.890.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Asics Court Slide 2', 'Tennis', 'Giày nữ', 'Size 27', 'Màu hồng', '1.890.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Asics Court Slide 2</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 27</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.890.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Asics Court Slide 2', 'Tennis', 'Giày nữ', 'Size 30', 'Màu hồng', '1.890.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Asics Court Slide 2</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 30</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.890.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+						<div class="slider-product-one-content-item1">
+							<img class="hinh1" src="../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png" style="width: 100%;" alt="">
+							<a
+								onclick="showmuahang('Giày Tennis Asics Court Slide 2', 'Tennis', 'Giày nữ', 'Size 34', 'Màu hồng', '1.890.000', '../bai cuoi ki/hinhanhweb/giay/GiayAMHongNu.png')">
+								Mua hàng</a>
+							<div class="slider-product-one-content-item-text">
+								<li id="ten"><b style="font-size:20px">Giày Tennis Asics Court Slide 2</b></li>
+								<li id="brand" style="font-size:15px">Tennis</li>
+								<li id="gioitinh" style="font-size:15px">Giày nữ</li>
+								<li id="size" style="font-size:15px">Size 34</li>
+								<li id="color" style="font-size:15px">Màu hồng</li>
+								<li>
+									<span style="font-size:15px; color: red;">
+										<span id="monney">1.890.000</span><sup>đ</sup>
+									</span>
+								</li>
+							</div>
+						</div>
+
+                     </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+ 

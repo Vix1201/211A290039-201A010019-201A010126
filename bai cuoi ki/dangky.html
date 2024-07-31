@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel</title>
+   
+    <script src="khuyenmai.js"></script>
+    <style>
+     .banner{
+        width: 100%;
+        height: 105px;
+        margin: 0;
+        padding: 0;
+        background: url("../bai cuoi ki/hinhanhweb/thethao.jpg") center/cover no-repeat;
+     }
+     .bannerright{
+        float: right;
+     }
+     .divtong{
+        width: 100%;
+        height: 720px;
+        margin: 0;
+        padding: 0;
+         /*background: url("B:/lap trinh web/bai cuoi ki/hinhanhweb/saobang8.gif") center/cover no-repeat;*/
+         background: url("../bai cuoi ki/hinhanhweb/nendangky.png") center/cover no-repeat;
+     }
+     .divright{
+        float: right;
+        width: 32%;
+     }
+     .divleft{
+        float: left;
+        width: 50%;
+     }
+     
+     .dangky{
+        font-size:20px; color:white; background-color:blue; padding-top: 5px; padding-bottom: 5px; padding-left: 40px;padding-right: 40px; margin-bottom:10px; border-radius: 5px;
+     }
+     .dangky:hover{
+        background-color: red;
+     }
+
+     .dangnhap{
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2); background-color: blue; color: white;
+     }
+     .dangnhap:hover{
+        background-color: red;
+     }
+     .red{
+        color: red;
+     }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="bannerright">
+            <table style="color:white; margin-right: 10px;">
+                <tr>
+                    <p style="color: white; position:absolute; font-size: 45px; left: 230px; top: 1px">SUPPER SPORTS</p>
+                    
+                </tr>
+            </table>   
+        </div>
+          <script>
+        function kiemTraDangNhap() {
+            var emaildangnhap = document.getElementById("emaildangnhap").value;
+            var matKhau = document.getElementById("matKhau").value;
+
+            if (emaildangnhap === "") {
+                alert("Vui lòng nhập Email hoặc số điện thoại");
+                document.getElementById("emaildangnhap").focus();
+            } else if (matKhau === "") {
+                alert("Vui lòng nhập Mật khẩu");
+                document.getElementById("matKhau").focus();
+            } else {
+                alert("Đăng nhập thành công");
+                window.location.href = "trang.html";
+            }
+        }
+
+        function quenMatKhau() {
+            // Thực hiện xử lý khi người dùng nhấn vào liên kết "Quên mật khẩu"
+            alert("Bạn đã chọn quên mật khẩu?");
+            // Có thể chuyển hướng đến trang quên mật khẩu hoặc thực hiện các bước khác
+            // window.location.href = "quenmatkhau.html";
+        }
+    </script>
+    </div>
+
+    <div class="divtong">
+        <div class="divright">
+            <table>
+                <tr>
+                    <td>
+                        <p style="font-size:35px;">ĐĂNG KÝ MIỄN PHÍ</p>
+                        <p style="font-size:25px;">Mua hàng thả ga cùng SUPPER SPORTS.</p>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                 <tr>
+            <td>
+                <input type="text" id="ho" name="ho" placeholder="Họ" style="width: 421px; height: 30px; font-size: 20px;">
+                <br>
+                <label id="hoError" class="red"></label>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="ten" name="ten" placeholder="Tên" style="width: 421px; height: 30px; font-size: 20px;">
+                <br>
+                <label id="tenError" class="red"></label>
+            </td>
+        </tr>
+
+        <tr>
+             <td>
+                <input type="text" id="Username__DangKy" name="tenTaiKhoan" style="width: 421px; height: 30px; font-size: 20px;" placeholder="Tên tài khoản">
+                 <br>
+                <label id="usernameError" class="red"></label>
+             </td>
+
+        </tr>
+
+        <tr>
+             <td><input type="password" id="Password__DangKy" name="matKhau" style="width: 421px; height: 30px; font-size: 20px;" placeholder="Mật khẩu">
+                <br>
+                <label id="passwordError" class="red"></label>
+             </td>
+        </tr> 
+
+        <tr>
+            <td>
+                <p style="font-size: 20px;">Ngày sinh</p>
+                <input type="date" id="ngaySinh" name="ngaySinh" style="height: 30px; font-size:18px;">
+                <br>
+                <label id="ngaySinhError" class="red" ></label>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="font-size: 20px;">
+                 <p >Giới tính</p>
+                <label>
+                    <input type="radio" id="nam" name="gioiTinh" value="nam"> Nam
+                </label>
+                <label>
+                    <input type="radio" id="nu" name="gioiTinh" value="nu"> Nữ
+                </label>
+                <label>
+                    <input type="radio" id="khac" name="gioiTinh" value="khac"> Khác
+                </label>
+                <br>
+                <label id="gioiTinhError" class="red"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+                <button class="dangky" type="button" onclick="kiemTraDangKy()">
+                    Đăng ký
+                </button> 
+            </td>
+        </tr>
+            </table>
+        </div>
+        <div class="divleft">
+            <img src="../bai cuoi ki/hinhanhweb/thethao10.png" style="width: 100%; margin:40px;">
+        </div>
+
+    </div>
+
+<script>
+function kiemTraDangKy() {
+        let valid = true;
+        
+        var ho = document.getElementById("ho").value.trim();
+        var ten = document.getElementById("ten").value.trim();
+        var username = document.getElementById("Username__DangKy").value.trim();
+        var password = document.getElementById("Password__DangKy").value.trim();
+        var ngaySinh = document.getElementById("ngaySinh").value.trim();
+        var gioiTinh = document.querySelector('input[name="gioiTinh"]:checked');
+
+        var hoError = document.getElementById("hoError");
+        var tenError = document.getElementById("tenError");
+        var usernameError = document.getElementById("usernameError");
+        var passwordError = document.getElementById("passwordError");
+        var ngaySinhError = document.getElementById("ngaySinhError");
+        var gioiTinhError = document.getElementById("gioiTinhError");
+       
+        document.querySelectorAll(".error-message").forEach(function(el) {
+            el.textContent = "";
+        });
+
+        if (ho === "") {
+            hoError.textContent ="Vui lòng nhập họ"
+            valid = false;
+        } else{
+            hoError.textContent ="";
+        }
+        if (ten === "") {
+            tenError.textContent = "Vui lòng nhập tên";
+            valid = false;
+        }else{
+            tenError.textContent ="";
+        }
+
+        if (username === "") {
+            usernameError.textContent = "Vui lòng nhập tài khoản";
+            valid = false;
+        } else if (username.length < 8) {
+            usernameError.textContent = "Tài khoản phải có ít nhất 8 ký tự";
+            valid = false;
+        } else {
+            usernameError.textContent = "";
+        }
+
+
+if (password === "") {
+    passwordError.textContent = "Vui lòng nhập mật khẩu";
+    valid = false;
+} else if (password.length < 8) {
+    passwordError.textContent = "Mật khẩu phải có ít nhất 8 ký tự";
+    valid = false;
+} else if (!/(?=.*[A-Z])(?=.*[!@#$&*])/.test(password)) {
+    passwordError.textContent = "Mật khẩu phải có ít nhất một ký tự viết hoa và một ký tự đặc biệt";
+    valid = false;
+} else {
+    passwordError.textContent = "";
+}
+
+
+        if (ngaySinh === "") {
+            ngaySinhError.textContent = "Vui lòng nhập ngày sinh";
+            valid = false;
+        } else {
+            var ngaySinhDate = new Date(ngaySinh);
+            var currentDate = new Date();
+            if (ngaySinhDate >= currentDate) {
+                ngaySinhError.textContent = "Ngày sinh phải nhỏ hơn ngày hiện tại";
+                valid = false;
+            } else {
+                ngaySinhError.textContent = "";
+            }
+        }
+
+        if (!gioiTinh) {
+            gioiTinhError.textContent = "Vui lòng chọn giới tính";
+            valid = false;
+        }else{
+            gioiTinhError.textContent = "";
+        }
+       
+        if (valid) {
+            alert("Đăng ký thành công"); 
+            window.location.href = "trang.html";
+        }
+    }
+
+</script>
+
+</body>
+
+</html>
